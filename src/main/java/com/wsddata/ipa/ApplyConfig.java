@@ -25,13 +25,12 @@ public class ApplyConfig {
 		    	for(int i=0;i<applyPaths.length;i++){
 		    		if(!applyPaths[i].equals("")&&applyPaths[i].startsWith("/")){
 		    			urlPatterns.add(applyPaths[i]);
-		    			System.out.println("ip检查应用在： "+applyPaths[i]);
+		    			System.out.println("ip验证应用在： "+applyPaths[i]);
 		    		}
 		    	}
 		    }
 	    }
-	    
-	    registration.setUrlPatterns(urlPatterns);//只对需要认证的服务进行验证
+	    registration.setUrlPatterns(urlPatterns);//只对需要ip认证的服务路径进行验证
 	    return registration;
 	}
 }
